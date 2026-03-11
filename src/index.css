@@ -1,0 +1,13 @@
+/* Index-level resets only */
+:root {
+  color-scheme: light;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}

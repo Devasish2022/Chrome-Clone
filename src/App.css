@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ===== RESET & GLOBAL ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('./assets/Jojo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== APP CONTAINER ===== */
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-link {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.header-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.header-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.avatar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.avatar:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+/* ===== GOOGLE LOGO ===== */
+.google-logo {
+  font-size: 88px;
+  font-weight: 500;
+  font-family: 'Product Sans', 'Roboto', sans-serif;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  letter-spacing: -2px;
+}
+
+.logo-g {
+  color: #4285f4;
+}
+
+.logo-o1 {
+  color: #ea4335;
+}
+
+.logo-o2 {
+  color: #fbbc05;
+}
+
+.logo-g2 {
+  color: #4285f4;
+}
+
+.logo-l {
+  color: #34a853;
+}
+
+.logo-e {
+  color: #ea4335;
+}
+
+/* ===== MAIN SEARCH ===== */
+.main-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ===== SEARCH BAR (Glassmorphism) ===== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 584px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: 0 16px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.search-bar:focus-within {
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 0 1px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #202124;
+  background: transparent;
+  height: 100%;
+}
+
+.search-input::placeholder {
+  color: #9aa0a6;
+}
+
+.search-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.action-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.action-icon:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ===== SHORTCUTS GRID ===== */
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 112px);
+  gap: 8px;
+  margin-top: 36px;
+  justify-content: center;
+}
+
+.shortcut-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.shortcut-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.shortcut-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shortcut-item:hover .shortcut-icon {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.shortcut-letter {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: none;
+  user-select: none;
+}
+
+.shortcut-label {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 12px;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 96px;
+  text-align: center;
+}
+
+.add-icon {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+.add-shortcut {
+  font-family: inherit;
+}
+
+/* ===== SHORTCUT WRAPPER (for remove button) ===== */
+.shortcut-wrapper {
+  position: relative;
+}
+
+.shortcut-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+  z-index: 2;
+}
+
+.shortcut-wrapper:hover .shortcut-remove {
+  opacity: 1;
+}
+
+.shortcut-remove:hover {
+  background: rgba(220, 50, 50, 0.85);
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(42, 42, 48, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  animation: slideUp 0.25s ease;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e8eaed;
+  letter-spacing: 0.2px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9aa0a6;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.modal-close:hover {
+  color: #e8eaed;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9aa0a6;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #e8eaed;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-input:focus {
+  border-color: #8ab4f8;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto', Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-cancel {
+  background: rgba(255, 255, 255, 0.08);
+  color: #8ab4f8;
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-done {
+  background: #8ab4f8;
+  color: #202124;
+}
+
+.btn-done:hover {
+  background: #aecbfa;
+}
+
+.btn-done:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .google-logo {
+    font-size: 60px;
+    margin-bottom: 24px;
+  }
+
+  .search-bar {
+    max-width: 90vw;
+    height: 44px;
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: repeat(4, 96px);
+    gap: 6px;
+    margin-top: 28px;
+  }
+
+  .shortcut-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .shortcut-letter {
+    font-size: 17px;
+  }
+
+  .shortcut-label {
+    font-size: 11px;
+  }
+
+  .header-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-logo {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    max-width: 92vw;
+    height: 42px;
+    padding: 0 12px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .shortcuts-grid {
+    grid-template-columns: repeat(3, 90px);
+    gap: 4px;
+    margin-top: 20px;
+  }
+
+  .shortcut-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-link {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+}
