@@ -1,8 +1,7 @@
 # 🌐 Chrome Clone – React New Tab Page
 
 🔗 **Live Demo:**  
-<!-- Add your deployed link here -->
-https://your-deployment-link.vercel.app/
+https://chrome-clone-tan.vercel.app/
 
 A pixel-perfect, responsive **Google Chrome New Tab Page** clone built with **React.js** and styled using modern **CSS (Grid + Flexbox)**.  
 Designed to replicate the real Chrome browser experience with a glassmorphism search bar, customizable shortcuts, and a sleek header.
@@ -12,8 +11,9 @@ Designed to replicate the real Chrome browser experience with a glassmorphism se
 ## 📸 Preview
 
 <p align="center">
-  <img width="1289" height="957" alt="Chrome Clone Preview" src="https://github.com/user-attachments/assets/your-screenshot-id" />
+  <img width="1919" height="957" alt="image" src="https://github.com/user-attachments/assets/e65d7447-fc4d-4a96-8870-9a623f64f38a" />
 </p>
+
 
 > Replace the image link above with your actual screenshot after uploading it to GitHub.
 
