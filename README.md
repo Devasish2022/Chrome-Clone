@@ -14,9 +14,6 @@ Designed to replicate the real Chrome browser experience with a glassmorphism se
   <img width="1919" height="957" alt="image" src="https://github.com/user-attachments/assets/e65d7447-fc4d-4a96-8870-9a623f64f38a" />
 </p>
 
-
-> Replace the image link above with your actual screenshot after uploading it to GitHub.
-
 ---
 
 ## 🚀 Overview
